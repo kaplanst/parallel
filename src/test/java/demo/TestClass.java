@@ -18,13 +18,13 @@ public class TestClass {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://bhphotovideo.com");
+        driver.get("https://vkitae.kz/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//input[@name='search']")).sendKeys("Бальзам Белый тигр");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='top-search-input']")).sendKeys("pen drive");
-        driver.findElement(By.xpath("//button[@name='Top Nav-Search']")).click();
-        driver.findElement(By.linkText("SanDisk 64GB Ultra Dual Drive Luxe USB 3.1 Flash Drive (USB Type-C / Type-A)")).click();
+        driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
+        driver.findElement(By.xpath("//img[@alt='Бальзам Белый тигр']")).click();
         driver.quit();
     }
 
@@ -33,27 +33,45 @@ public class TestClass {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://bhphotovideo.com");
+        driver.get("https://vkitae.kz/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//input[@name='search']")).sendKeys("Крем-бальзам SUNGAZ");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='top-search-input']")).sendKeys("Dell laptop");
-        driver.findElement(By.xpath("//button[@name='Top Nav-Search']")).click();
-        driver.findElement(By.linkText("Latitude Laptops & Tablets")).click();
+        driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
+        driver.findElement(By.xpath("//img[@alt='Крем-бальзам SUNGAZ']")).click();
         driver.quit();
     }
+
     @Test
     public static void TestThree() throws InterruptedException {
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://bhphotovideo.com");
+        driver.get("https://vkitae.kz/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//input[@name='search']")).sendKeys("Крем для рук Collagen");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id='top-search-input']")).sendKeys("Bububu");
-        driver.findElement(By.xpath("//button[@name='Top Nav-Search']")).click();
+        driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
+        driver.findElement(By.xpath("//img[@alt='Крем для рук Collagen']")).click();
         driver.quit();
     }
+
+    @Test
+    public static void TestFour() throws InterruptedException {
+        WebDriver driver;
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("https://vkitae.kz/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//input[@name='search']")).sendKeys("Крем для рук Алоэ");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg']")).click();
+        driver.findElement(By.xpath("//img[@alt='Крем для рук Алоэ']")).click();
+        driver.quit();
+    }
+
 
 }
